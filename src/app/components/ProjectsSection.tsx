@@ -30,31 +30,19 @@ const ProjectsSection = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-card-bg rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
-            >
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold text-white mb-3">
-                  {project.title}
-                </h3>
-                <p className="text-gray-300 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 bg-section-bg text-gray-300 rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+            <div key={index} className="card bg-base-200 shadow-xl">
+              <div className="card-body">
+                <h3 className="card-title text-white">{project.title}</h3>
+                <p className="text-gray-300">{project.description}</p>
+                <div className="card-actions justify-between items-end mt-4">
+                  <div className="flex flex-wrap gap-2 justify-end">
+                    {project.technologies.map((tech, techIndex) => (
+                      <div key={techIndex} className="badge badge-primary">
+                        {tech}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <a
-                  href={project.link}
-                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
-                >
-                  View Project
-                </a>
               </div>
             </div>
           ))}

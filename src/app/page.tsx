@@ -9,7 +9,7 @@ export default function Home() {
     <main>
       <LandingSection />
       <AboutSection />
-      <ExpertiseSection />
+      {/* <ExpertiseSection /> */}
       <ProjectsSection />
     </main>
   );
