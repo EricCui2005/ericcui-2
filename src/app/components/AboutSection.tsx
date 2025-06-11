@@ -1,13 +1,20 @@
 import React from "react";
+import Image from "next/image";
 
 const AboutSection = () => {
   return (
     <section id="about" className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          {/* Circular Image Placeholder */}
-          <div className="w-64 h-64 rounded-full bg-gray-700 flex items-center justify-center">
-            <span className="text-gray-400 text-lg">Your Photo</span>
+          {/* Profile Image */}
+          <div className="w-64 h-64 relative">
+            <Image
+              src="/Eric.jpeg"
+              alt="Eric Cui"
+              fill
+              className="rounded-full object-cover"
+              priority
+            />
           </div>
 
           {/* Text Content */}
