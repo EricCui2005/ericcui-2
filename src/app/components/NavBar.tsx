@@ -22,7 +22,7 @@ const NavBar = () => {
 
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50">
-      <div className="bg-gray-900/90 backdrop-blur-md border border-gray-700 rounded-xl px-3 py-2 shadow-lg">
+      <div className="bg-gray-900/90 backdrop-blur-md border border-gray-700 rounded-xl px-3 py-3 shadow-lg">
         <div className="flex items-center space-x-6">
           {/* Navigation Links */}
           <div className="flex space-x-1">
