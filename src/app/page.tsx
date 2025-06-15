@@ -1,7 +1,7 @@
 import React from "react";
 import LandingSection from "./components/LandingSection";
 import AboutSection from "./components/AboutSection";
-import ExpertiseSection from "./components/ExpertiseSection";
+import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
       <LandingSection />
       <AboutSection />
       {/* <ExpertiseSection /> */}
+      <ExperienceSection />
       <ProjectsSection />
     </main>
   );
