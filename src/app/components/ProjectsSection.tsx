@@ -29,7 +29,7 @@ const ProjectsSection = () => {
         "Python",
       ],
       link: "#",
-      image: "/Eric.jpeg",
+      image: "/project-images/Stanford Scheduler.svg",
       links: [
         {
           name: "Github",
@@ -51,7 +51,7 @@ const ProjectsSection = () => {
         "TensorFlow",
       ],
       link: "#",
-      image: "/Eric.jpeg",
+      image: "/project-images/2048.svg",
       links: [
         {
           name: "Github",
@@ -69,7 +69,7 @@ const ProjectsSection = () => {
         "An NLP-powered education technology copilot in partnership with Subject Learning capable of generating module-specific supplementary learning materials and supporting content-based timestamp seeking.",
       technologies: ["Tailwind", "Node.js", "Next.js", "React"],
       link: "#",
-      image: "/Eric.jpeg",
+      image: "/project-images/Subject.svg",
       links: [
         {
           name: "Github",
@@ -83,7 +83,7 @@ const ProjectsSection = () => {
         "A research study exploring training convolutional neural networks to differentiate between muffin-esque chihuahuas and dog-like blueberry muffins.",
       technologies: ["TensorFlow", "Python", "Google Colab"],
       link: "#",
-      image: "/Eric.jpeg",
+      image: "/project-images/Chuffin.svg",
       links: [
         {
           name: "Github",
@@ -108,14 +108,14 @@ const ProjectsSection = () => {
         "Vercel",
       ],
       link: "#",
-      image: "/Eric.jpeg",
+      image: "/project-images/Words.svg",
       links: [
         {
           name: "Github",
           link: "https://github.com/EricCui2005/words",
         },
         {
-          name: "Report",
+          name: "Website",
           link: "https://words-drab.vercel.app/",
         },
       ],
@@ -126,7 +126,7 @@ const ProjectsSection = () => {
         "A research study exploring AI play in Nine Men's Morris using recursive decision-making algorithms and custom game evaluation routines.",
       technologies: ["Replit", "Python", "Google Colab"],
       link: "#",
-      image: "/Eric.jpeg",
+      image: "/project-images/NMM.svg",
       links: [
         {
           name: "Github",

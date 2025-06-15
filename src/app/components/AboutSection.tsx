@@ -21,15 +21,17 @@ const AboutSection = () => {
           <div className="flex-1">
             <h2 className="text-4xl font-bold text-white mb-8">About Me</h2>
             <p className="text-lg text-gray-300 mb-6">
-              I am a passionate developer with a keen interest in building
-              innovative solutions. My journey in technology has equipped me
-              with a diverse set of skills and experiences that I&apos;m excited
-              to share and apply to new challenges.
+              Hi there! I&apos;m Eric Cui, a Computer Science student at
+              Stanford University specializing in Artificial Intelligence.
+              I&apos;m passionate about creating innovative solutions at the
+              intersection of full-stack development, deep learning, and
+              cutting-edge AI research. My experience lies in building scalable
+              web applications, integrating natural language processing systems,
+              and managing robust API services.
             </p>
             <p className="text-lg text-gray-300">
-              When I&apos;m not coding, you can find me exploring new
-              technologies, contributing to open-source projects, or sharing my
-              knowledge with the developer community.
+              I&apos;m always eager to tackle challenging projects and
+              collaborate with others to make an impact. Let&apos;s connect!
             </p>
           </div>
         </div>
