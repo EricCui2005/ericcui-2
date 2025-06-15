@@ -191,7 +191,7 @@ const ProjectsSection = () => {
                     {project.technologies.map((tech, techIndex) => (
                       <div
                         key={techIndex}
-                        className="badge bg-transparent border-sky-500 badge-primary text-sky-500"
+                        className="badge bg-transparent border-sky-400 badge-primary text-sky-400"
                       >
                         {tech}
                       </div>
