@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 
 type Project = {
@@ -14,7 +15,77 @@ type Project = {
 };
 
 const ProjectsSection = () => {
+  const [showAll, setShowAll] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+
   const projects: Project[] = [
+    {
+      title: "Pretrained Vision Models for Dermascopic Image Analysis",
+      description:
+        "A medical imaging research study exploring finetuning pretrained vision models for downstream dermascopic image analysis. Studied DINOv2 and ViT architectures with lossy image augmentation techniques.",
+      technologies: ["PyTorch", "Python", "Hugging Face", "Weights and Biases"],
+      link: "#",
+      image: "/project-images/ISIC.png",
+      links: [
+        {
+          name: "Github",
+          link: "https://github.com/EricCui2005/CS231N",
+        },
+        {
+          name: "Report",
+          link: "https://drive.google.com/file/d/1dgttbOOVdejsM7S5hZa4scnXucNojkiQ/view?usp=sharing",
+        },
+      ],
+    },
+    {
+      title: "League of Legends Match Prediction Using Stochastic Matrices",
+      description:
+        "A LoL match prediction model using stochastic matrices and Markov chains. Architected a discrete-time Markov chain model to quantify game state transitions and predict match outcomes. ",
+      technologies: [
+        "RiotGames API",
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+      ],
+      link: "#",
+      image: "/project-images/LOL.jpeg",
+      links: [
+        {
+          name: "Github",
+          link: "https://github.com/EricCui2005/LoL-Analytics",
+        },
+        {
+          name: "Report",
+          link: "https://drive.google.com/file/d/1xxVapXsMOevBHwCXgZbT04-qrjk8HhRr/view?usp=sharing",
+        },
+      ],
+    },
+    {
+      title: 'TreeTrash: TreeHacks 2025 "Most Creative Use of OpenAI API" 2nd',
+      description:
+        "A computer vision pipeline for identifying incorrectly sorted waste items, winning 2nd Prize at Stanford TreeHacks 2025. Integrated YOLOv8 object detection, OpenCV preprocessing, and vision models for waste classification to generate sustainability reports.",
+      technologies: [
+        "OpenAI API",
+        "YOLOv8",
+        "OpenCV",
+        "Gemini Pro",
+        "Next.js",
+        "GPT-4o",
+      ],
+      link: "#",
+      image: "/project-images/TreeTrash.png",
+      links: [
+        {
+          name: "Github",
+          link: "https://github.com/EricCui2005/treehacks-2025",
+        },
+        {
+          name: "Devpost",
+          link: "https://devpost.com/software/treetrash",
+        },
+      ],
+    },
     {
       title: "Stanford Scheduler",
       description:
@@ -140,6 +211,17 @@ const ProjectsSection = () => {
     },
   ];
 
+  const displayedProjects = showAll ? projects : projects.slice(0, 3);
+
+  const handleShowLess = () => {
+    setIsAnimating(true);
+    // Wait for fade-out animation to complete before hiding cards
+    setTimeout(() => {
+      setShowAll(false);
+      setIsAnimating(false);
+    }, 400);
+  };
+
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
@@ -147,10 +229,12 @@ const ProjectsSection = () => {
           Portfolio
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-900 card h-full bg-base-200 shadow-xl"
+              className={`bg-gray-900 card h-full bg-base-200 shadow-xl transition-all duration-500 ease-in-out ${
+                index >= 3 && showAll && !isAnimating ? "animate-fadeIn" : ""
+              } ${index >= 3 && isAnimating ? "animate-fadeOut" : ""}`}
             >
               <figure className="relative h-48 md:h-56 lg:h-64">
                 <Image
@@ -186,7 +270,7 @@ const ProjectsSection = () => {
                   <p className="text-gray-300">{project.description}</p>
                 </div>
                 <div className="flex-grow"></div>
-                <div className="w-full mt-4">
+                <div className="w-full">
                   <div className="flex flex-wrap-reverse justify-end gap-2">
                     {project.technologies.map((tech, techIndex) => (
                       <div
@@ -202,7 +286,88 @@ const ProjectsSection = () => {
             </div>
           ))}
         </div>
+
+        {!showAll && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={() => setShowAll(true)}
+              className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 flex items-center gap-2"
+            >
+              <span>Show More</span>
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+          </div>
+        )}
+
+        {showAll && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={handleShowLess}
+              disabled={isAnimating}
+              className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <span>Show Less</span>
+              <svg
+                className="w-5 h-5 rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeOut {
+          from {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          to {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+        }
+
+        .animate-fadeIn {
+          animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        .animate-fadeOut {
+          animation: fadeOut 0.4s ease-in forwards;
+        }
+      `}</style>
     </section>
   );
 };
