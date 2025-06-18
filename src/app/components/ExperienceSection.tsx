@@ -117,7 +117,7 @@ const ExperienceSection = () => {
               {experiences.map((experience, index) => (
                 <div
                   key={index}
-                  className="bg-gray-900 card bg-base-200 shadow-xl w-96 flex-shrink-0"
+                  className="bg-gray-900 card bg-base-200 shadow-xl w-88 flex-shrink-0"
                 >
                   <div className="card-body flex flex-col h-full p-6">
                     <div className="flex items-start gap-4 mb-4">
