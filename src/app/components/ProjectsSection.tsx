@@ -49,7 +49,7 @@ const ProjectsSection = () => {
         "Matplotlib",
       ],
       link: "#",
-      image: "/project-images/LOL.jpeg",
+      image: "/project-images/LoL.png",
       links: [
         {
           name: "Github",
