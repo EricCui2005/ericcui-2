@@ -138,7 +138,7 @@ const ProjectsSection = () => {
       title: "Education Technology Copilot",
       description:
         "An NLP-powered education technology copilot in partnership with Subject Learning capable of generating module-specific supplementary learning materials and supporting content-based timestamp seeking.",
-      technologies: ["Tailwind", "Node.js", "Next.js", "React"],
+      technologies: ["OpenAI API", "Tailwind", "Node.js", "Next.js", "React"],
       link: "#",
       image: "/project-images/Subject.svg",
       links: [

@@ -70,7 +70,7 @@ const ContactSection = () => {
             {/* Twitter */}
             <div className="bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
               <a
-                href="https://twitter.com/yourhandle"
+                href="https://x.com/EricCui29"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-sky-400 hover:bg-sky-300 rounded-full flex items-center justify-center mb-3 transition-colors duration-300 cursor-pointer"
@@ -86,13 +86,13 @@ const ContactSection = () => {
               <h3 className="text-base font-semibold text-white mb-1">
                 Twitter
               </h3>
-              <p className="text-gray-400 text-xs">@yourhandle</p>
+              <p className="text-gray-400 text-xs">@EricCui29</p>
             </div>
 
             {/* Resume */}
             <div className="bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
               <a
-                href="/resume.pdf"
+                href="/Eric Cui Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-sky-400 hover:bg-sky-300 rounded-full flex items-center justify-center mb-3 transition-colors duration-300 cursor-pointer"

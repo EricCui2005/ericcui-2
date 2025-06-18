@@ -15,7 +15,7 @@ type Experience = {
 const ExperienceSection = () => {
   const experiences: Experience[] = [
     {
-      company: "Amazon",
+      company: "Amazon Web Services",
       position: "Software Development Engineer Intern",
       duration: "June - Present 2025",
       location: "Seattle, WA",
