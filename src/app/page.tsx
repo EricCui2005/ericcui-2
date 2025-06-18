@@ -12,7 +12,6 @@ export default function Home() {
       <NavBar />
       <LandingSection />
       <AboutSection />
-      {/* <ExpertiseSection /> */}
       <ExperienceSection />
       <ProjectsSection />
       <ContactSection />
