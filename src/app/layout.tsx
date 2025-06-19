@@ -20,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" href="/E.svg" />
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans`}>
         {children}
       </body>
