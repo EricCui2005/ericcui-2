@@ -20,7 +20,7 @@ const ExperienceSection = () => {
       duration: "June - Present 2025",
       location: "Seattle, WA",
       description:
-        "Working on Rust-based cryptographic SDKs for exposing AWS CloudHSM functionality. Developing post-quantum cryptography support and CLI tools for multi-language SDK families",
+        "Developing Rust-based post-quantum cryptography support for AWS hardware security modules. Working on cryptograhpic SDKs (PKCS#11, JCE, OpenSSL) for exposing CloudHSM functionalities. Developing Module-Lattice-Based CRYSTALS Dilithium (ML-DSA) cryptographic operation support.",
       logo: "/experience-images/Amazon.jpg",
     },
     {
