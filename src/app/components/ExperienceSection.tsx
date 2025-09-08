@@ -17,10 +17,10 @@ const ExperienceSection = () => {
     {
       company: "Amazon Web Services",
       position: "Software Development Engineer Intern",
-      duration: "June - Present 2025",
+      duration: "June - September 2025",
       location: "Seattle, WA",
       description:
-        "Developing Rust-based post-quantum cryptography support for AWS hardware security modules. Working on cryptograhpic SDKs (PKCS#11, JCE, OpenSSL) for exposing CloudHSM functionalities. Developing Module-Lattice-Based CRYSTALS Dilithium (ML-DSA) cryptographic operation support.",
+        "Developed Rust-based post-quantum cryptography support for AWS hardware security modules. Worked on cryptograhpic SDKs (PKCS#11, JCE, OpenSSL) for exposing CloudHSM functionalities. Implemented Module-Lattice-Based CRYSTALS Dilithium (ML-DSA) cryptographic operation support.",
       logo: "/experience-images/Amazon.jpg",
     },
     {
