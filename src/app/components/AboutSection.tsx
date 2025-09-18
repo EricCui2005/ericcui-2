@@ -26,8 +26,8 @@ const AboutSection = () => {
               I&apos;m passionate about creating innovative solutions at the
               intersection of full-stack development and cutting-edge AI
               research. My experience spans building secure infrastructure at
-              scale, building scalable web applications, managing robust API
-              services, and developing user-facing experiences. I&apos;m
+              scale, developing scalable web applications, managing robust API
+              services, and designing user-facing experiences. I&apos;m
               currently interested in Web3 and applied AI.
             </p>
             <p className="text-lg text-gray-300">
