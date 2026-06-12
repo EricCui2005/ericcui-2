@@ -85,8 +85,8 @@ const ContactSection = () => {
             <span className="block w-16 h-1 mt-3 rounded-full bg-gradient-to-r from-violet-500 to-blue-500" />
           </h2>
           <p className="text-muted mb-12">
-            Let&apos;s connect and discuss opportunities — reach out through
-            any channel below.
+            Let&apos;s connect and discuss opportunities. Reach out through any
+            channel below.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -115,7 +115,7 @@ const ContactSection = () => {
           </div>
 
           <p className="text-xs text-muted/70 text-center mt-16">
-            © 2026 Eric Cui — built with Next.js
+            © 2026 Eric Cui. Built with Next.js
           </p>
         </div>
       </div>
