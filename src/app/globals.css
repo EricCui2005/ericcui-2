@@ -1,14 +1,27 @@
 @import "tailwindcss";
-@plugin "daisyui";
 
 :root {
-  --background: #1f2937;
-  --foreground: #ededed;
+  --background: #0a0e0c;
+  --surface: #101612;
+  --surface-hover: #141c16;
+  --border: #1f2a23;
+  --foreground: #e5ece7;
+  --muted: #8b9a90;
+  --accent: #4ade80;
+  --accent-strong: #22c55e;
+  --accent-dim: #15803d;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-edge: var(--border);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-dim: var(--accent-dim);
   --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, sans-serif;
   --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", "Fira Code",
@@ -22,11 +35,105 @@ body {
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
-/* Enhanced font rendering */
+::selection {
+  background: var(--accent-dim);
+  color: var(--foreground);
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+.grid-bg {
+  background-image: linear-gradient(
+      to right,
+      rgba(74, 222, 128, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(74, 222, 128, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 8ch;
+  animation: typing 1.2s steps(8, end) 0.4s both;
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 0.6ch;
+  background: var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 8ch;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fadeOut {
+  animation: fadeOut 0.4s ease-in forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing {
+    animation: none;
+    width: 8ch;
+  }
+  .cursor-blink {
+    animation: none;
+  }
+  .animate-fadeIn,
+  .animate-fadeOut {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .debug {

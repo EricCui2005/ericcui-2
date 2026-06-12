@@ -6,7 +6,6 @@ type Project = {
   title: string;
   description: string;
   technologies: string[];
-  link: string;
   image: string;
   links: {
     name: string;
@@ -24,15 +23,14 @@ const ProjectsSection = () => {
       description:
         "A medical imaging research study exploring finetuning pretrained vision models for downstream dermascopic image analysis. Studied DINOv2 and ViT architectures with lossy image augmentation techniques.",
       technologies: ["PyTorch", "Python", "Hugging Face", "Weights and Biases"],
-      link: "#",
       image: "/project-images/ISIC.png",
       links: [
         {
-          name: "Github",
+          name: "github",
           link: "https://github.com/EricCui2005/CS231N",
         },
         {
-          name: "Report",
+          name: "report",
           link: "https://drive.google.com/file/d/1dgttbOOVdejsM7S5hZa4scnXucNojkiQ/view?usp=sharing",
         },
       ],
@@ -48,15 +46,14 @@ const ProjectsSection = () => {
         "NumPy",
         "Matplotlib",
       ],
-      link: "#",
       image: "/project-images/LoL.png",
       links: [
         {
-          name: "Github",
+          name: "github",
           link: "https://github.com/EricCui2005/LoL-Analytics",
         },
         {
-          name: "Report",
+          name: "report",
           link: "https://drive.google.com/file/d/1xxVapXsMOevBHwCXgZbT04-qrjk8HhRr/view?usp=sharing",
         },
       ],
@@ -73,15 +70,14 @@ const ProjectsSection = () => {
         "Next.js",
         "GPT-4o",
       ],
-      link: "#",
       image: "/project-images/TreeTrash.png",
       links: [
         {
-          name: "Github",
+          name: "github",
           link: "https://github.com/EricCui2005/treehacks-2025",
         },
         {
-          name: "Devpost",
+          name: "devpost",
           link: "https://devpost.com/software/treetrash",
         },
       ],
@@ -99,11 +95,10 @@ const ProjectsSection = () => {
         "Flask",
         "Python",
       ],
-      link: "#",
       image: "/project-images/Stanford Scheduler.svg",
       links: [
         {
-          name: "Github",
+          name: "github",
           link: "https://github.com/ChapSpace/CourseConstrainSolverBackend",
         },
       ],
@@ -121,15 +116,14 @@ const ProjectsSection = () => {
         "Jupyter Notebook",
         "TensorFlow",
       ],
-      link: "#",
       image: "/project-images/2048.svg",
       links: [
         {
-          name: "Github",
+          name: "github",
           link: "https://github.com/EricCui2005/2048",
         },
         {
-          name: "Report",
+          name: "report",
           link: "https://drive.google.com/file/d/1O7x6gZ0GiAALIRFp8dv8l2TGeE0QlWSU/view?pli=1",
         },
       ],
@@ -139,11 +133,10 @@ const ProjectsSection = () => {
       description:
         "An NLP-powered education technology copilot in partnership with Subject Learning capable of generating module-specific supplementary learning materials and supporting content-based timestamp seeking.",
       technologies: ["OpenAI API", "Tailwind", "Node.js", "Next.js", "React"],
-      link: "#",
       image: "/project-images/Subject.svg",
       links: [
         {
-          name: "Github",
+          name: "github",
           link: "https://github.com/EricCui2005/subject-sandbox",
         },
       ],
@@ -153,15 +146,14 @@ const ProjectsSection = () => {
       description:
         "A research study exploring training convolutional neural networks to differentiate between muffin-esque chihuahuas and dog-like blueberry muffins.",
       technologies: ["TensorFlow", "Python", "Google Colab"],
-      link: "#",
       image: "/project-images/Chuffin.svg",
       links: [
         {
-          name: "Github",
+          name: "github",
           link: "https://github.com/EricCui2005/Chuffin",
         },
         {
-          name: "Report",
+          name: "report",
           link: "https://drive.google.com/file/d/1rj0hPTKIullq8Tfltbj2IXPIyfsg0rhr/view",
         },
       ],
@@ -178,15 +170,14 @@ const ProjectsSection = () => {
         "Node.js",
         "Vercel",
       ],
-      link: "#",
       image: "/project-images/Words.svg",
       links: [
         {
-          name: "Github",
+          name: "github",
           link: "https://github.com/EricCui2005/words",
         },
         {
-          name: "Website",
+          name: "website",
           link: "https://words-drab.vercel.app/",
         },
       ],
@@ -196,15 +187,14 @@ const ProjectsSection = () => {
       description:
         "A research study exploring AI play in Nine Men's Morris using recursive decision-making algorithms and custom game evaluation routines.",
       technologies: ["Replit", "Python", "Google Colab"],
-      link: "#",
       image: "/project-images/NMM.svg",
       links: [
         {
-          name: "Github",
+          name: "github",
           link: "https://github.com/EricCui2005/Nine-Mens-Morris",
         },
         {
-          name: "Report",
+          name: "report",
           link: "https://drive.google.com/file/d/1DelBpF1LLmoTEyKdarjO7lrHgJN2c7Z7/view",
         },
       ],
@@ -223,151 +213,86 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-white mb-12 text-center">
-          Portfolio
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {displayedProjects.map((project, index) => (
-            <div
-              key={index}
-              className={`bg-gray-900 card h-full bg-base-200 shadow-xl transition-all duration-500 ease-in-out ${
-                index >= 3 && showAll && !isAnimating ? "animate-fadeIn" : ""
-              } ${index >= 3 && isAnimating ? "animate-fadeOut" : ""}`}
-            >
-              <figure className="relative h-48 md:h-56 lg:h-64">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                />
-              </figure>
-              <div className="card-body flex flex-col h-full">
-                <div className="flex flex-col gap-1">
-                  <h3 className="card-title text-white">{project.title}</h3>
-                  <div className="h-5 flex flex-wrap gap-1">
-                    {project.links.map((link, index) => (
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-12">
+            <span className="text-accent-dim">$</span> ls{" "}
+            <span className="text-accent">~/projects</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {displayedProjects.map((project, index) => (
+              <div
+                key={index}
+                className={`bg-surface border border-edge rounded-lg overflow-hidden flex flex-col h-full transition-all duration-300 hover:border-accent-dim hover:shadow-[0_0_24px_rgba(74,222,128,0.08)] ${
+                  index >= 3 && showAll && !isAnimating ? "animate-fadeIn" : ""
+                } ${index >= 3 && isAnimating ? "animate-fadeOut" : ""}`}
+              >
+                <figure className="relative h-48 border-b border-edge">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                </figure>
+                <div className="p-5 flex flex-col flex-grow">
+                  <h3 className="text-base font-bold text-foreground leading-snug mb-2">
+                    {project.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-2 mb-3 font-mono text-xs">
+                    {project.links.map((link, linkIndex) => (
                       <a
                         href={link.link}
-                        key={index}
+                        key={linkIndex}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="badge h-5 bg-black border-black text-white rounded-xl flex items-center gap-1 pl-1"
+                        className="text-accent hover:text-accent-strong hover:underline underline-offset-4 transition-colors duration-200"
                       >
-                        <Image
-                          src="/link.png"
-                          alt="Link"
-                          width={12}
-                          height={12}
-                          className="w-3 h-3"
-                        />
-                        {link.name}
+                        [{link.name}]
                       </a>
                     ))}
                   </div>
-                  <p className="text-gray-300">{project.description}</p>
-                </div>
-                <div className="flex-grow"></div>
-                <div className="w-full">
-                  <div className="flex flex-wrap-reverse justify-end gap-2">
+                  <p className="text-muted text-sm leading-relaxed mb-4">
+                    {project.description}
+                  </p>
+                  <div className="flex-grow" />
+                  <div className="flex flex-wrap gap-1.5">
                     {project.technologies.map((tech, techIndex) => (
-                      <div
+                      <span
                         key={techIndex}
-                        className="badge bg-transparent border-sky-400 badge-primary text-sky-400"
+                        className="font-mono text-[11px] text-accent border border-accent-dim/60 rounded px-1.5 py-0.5"
                       >
                         {tech}
-                      </div>
+                      </span>
                     ))}
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <div className="flex justify-center mt-12">
+            {!showAll ? (
+              <button
+                onClick={() => setShowAll(true)}
+                className="font-mono text-sm text-muted border border-edge rounded-lg px-6 py-2.5 hover:text-accent hover:border-accent-dim transition-all duration-300"
+              >
+                $ ls --all <span className="text-accent-dim">↓</span>
+              </button>
+            ) : (
+              <button
+                onClick={handleShowLess}
+                disabled={isAnimating}
+                className="font-mono text-sm text-muted border border-edge rounded-lg px-6 py-2.5 hover:text-accent hover:border-accent-dim transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                $ ls | head -3 <span className="text-accent-dim">↑</span>
+              </button>
+            )}
+          </div>
         </div>
-
-        {!showAll && (
-          <div className="flex justify-center mt-12">
-            <button
-              onClick={() => setShowAll(true)}
-              className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 flex items-center gap-2"
-            >
-              <span>Show More</span>
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-          </div>
-        )}
-
-        {showAll && (
-          <div className="flex justify-center mt-12">
-            <button
-              onClick={handleShowLess}
-              disabled={isAnimating}
-              className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              <span>Show Less</span>
-              <svg
-                className="w-5 h-5 rotate-180"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-          </div>
-        )}
       </div>
-
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes fadeOut {
-          from {
-            opacity: 1;
-            transform: translateY(0);
-          }
-          to {
-            opacity: 0;
-            transform: translateY(-20px);
-          }
-        }
-
-        .animate-fadeIn {
-          animation: fadeIn 0.6s ease-out forwards;
-        }
-
-        .animate-fadeOut {
-          animation: fadeOut 0.4s ease-in forwards;
-        }
-      `}</style>
     </section>
   );
 };

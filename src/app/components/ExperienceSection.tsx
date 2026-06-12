@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 
@@ -44,49 +42,56 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-white mb-12 text-center">
-          Experience
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {experiences.map((experience, index) => (
-            <div
-              key={index}
-              className="bg-gray-900 card bg-base-200 shadow-xl h-full"
-            >
-              <div className="card-body flex flex-col h-full p-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-12">
+            <span className="text-accent-dim">$</span> git log{" "}
+            <span className="text-accent">--experience</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {experiences.map((experience, index) => (
+              <div
+                key={index}
+                className="bg-surface border border-edge rounded-lg p-6 flex flex-col h-full transition-all duration-300 hover:border-accent-dim hover:shadow-[0_0_24px_rgba(74,222,128,0.08)]"
+              >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="relative w-16 h-16 flex-shrink-0">
+                  <div className="relative w-14 h-14 shrink-0">
                     <Image
                       src={experience.logo}
                       alt={`${experience.company} logo`}
                       fill
-                      className="object-contain rounded-lg"
+                      className="object-contain rounded"
                     />
                   </div>
-                  <div className="flex-grow">
-                    <h3 className="text-xl font-bold text-white mb-1">
+                  <div>
+                    <h3 className="text-lg font-bold text-foreground leading-snug mb-1">
                       {experience.position}
                     </h3>
-                    <h4 className="text-lg text-sky-400 mb-1">
+                    <h4 className="font-mono text-accent text-sm">
                       {experience.company}
                     </h4>
-                    <p className="text-sm text-gray-400 mb-1">
-                      {experience.duration}
-                    </p>
-                    <p className="text-sm text-gray-400">
-                      {experience.location}
-                    </p>
                   </div>
                 </div>
 
-                <p className="text-gray-300 mb-4 flex-grow">
+                <div className="font-mono text-xs text-muted mb-4 space-y-1">
+                  <p>
+                    <span className="text-accent-dim">--when</span>{" "}
+                    {experience.duration}
+                  </p>
+                  <p>
+                    <span className="text-accent-dim">--where</span>{" "}
+                    {experience.location}
+                  </p>
+                </div>
+
+                <p className="text-muted text-sm leading-relaxed flex-grow">
                   {experience.description}
                 </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

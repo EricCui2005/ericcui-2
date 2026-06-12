@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,6 +14,13 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
+export const metadata: Metadata = {
+  title: "Eric Cui",
+  description:
+    "Eric Cui — CS & EE at Stanford. Software engineer interested in applied AI, Web3, and systems.",
+  icons: { icon: "/E.svg" },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,7 +28,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" href="/E.svg" />
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans`}>
         {children}
       </body>
