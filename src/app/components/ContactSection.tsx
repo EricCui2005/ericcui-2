@@ -113,10 +113,6 @@ const ContactSection = () => {
               </a>
             ))}
           </div>
-
-          <p className="text-xs text-muted/70 text-center mt-16">
-            © 2026 Eric Cui. Built with Next.js
-          </p>
         </div>
       </div>
     </section>
