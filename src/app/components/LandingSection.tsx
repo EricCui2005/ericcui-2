@@ -15,8 +15,8 @@ const LandingSection = () => {
       }}
       onMouseLeave={() => setSpot({ x: -1000, y: -1000 })}
     >
-      <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-violet-600/20 rounded-full blur-3xl" />
-      <div className="absolute -bottom-32 -right-32 w-[480px] h-[480px] bg-blue-600/20 rounded-full blur-3xl" />
+      <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-violet-600/20 rounded-full blur-3xl animate-blob" />
+      <div className="absolute -bottom-32 -right-32 w-[480px] h-[480px] bg-blue-600/20 rounded-full blur-3xl animate-blob-delayed" />
       <div
         className="pointer-events-none absolute inset-0 transition-opacity duration-300"
         style={{
