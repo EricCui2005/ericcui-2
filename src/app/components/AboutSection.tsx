@@ -26,7 +26,7 @@ const AboutSection = () => {
 
             <div className="flex-1">
               <p className="text-lg text-muted leading-relaxed mb-6">
-                Hi there! I&apos;m Eric Cui, a Stanford CS + EE undergrad
+                Hi there! I&apos;m Eric Cui, a Stanford CS undergrad
                 specializing in Artificial Intelligence and Hardware &
                 Software. I&apos;m passionate about creating innovative
                 solutions at the intersection of full-stack development and

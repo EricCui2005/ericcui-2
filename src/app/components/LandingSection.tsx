@@ -20,7 +20,7 @@ const LandingSection = () => {
       <div
         className="pointer-events-none absolute inset-0 transition-opacity duration-300"
         style={{
-          background: `radial-gradient(500px circle at ${spot.x}px ${spot.y}px, rgba(139, 92, 246, 0.18), rgba(59, 130, 246, 0.08) 45%, transparent 70%)`,
+          background: `radial-gradient(250px circle at ${spot.x}px ${spot.y}px, rgba(139, 92, 246, 0.18), rgba(59, 130, 246, 0.08) 45%, transparent 70%)`,
         }}
       />
 
@@ -29,7 +29,7 @@ const LandingSection = () => {
         <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent pb-2">
           Eric Cui
         </h1>
-        <p className="text-xl text-muted mt-4">CS &amp; EE at Stanford</p>
+        <p className="text-xl text-muted mt-4">CS at Stanford</p>
       </div>
 
       <div className="absolute bottom-10 text-muted text-sm animate-bounce">

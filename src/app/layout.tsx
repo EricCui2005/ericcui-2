@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Eric Cui",
   description:
-    "Eric Cui, CS & EE at Stanford. Software engineer interested in applied AI, Web3, and systems.",
+    "Eric Cui, CS at Stanford. Software engineer interested in applied AI, Web3, and systems.",
   icons: { icon: "/E.svg" },
 };
 
