@@ -80,9 +80,9 @@ const ContactSection = () => {
     <section id="contact" className="py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-4">
-            <span className="text-accent-dim">$</span> ping{" "}
-            <span className="text-accent">eric</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Get in Touch
+            <span className="block w-16 h-1 mt-3 rounded-full bg-gradient-to-r from-violet-500 to-blue-500" />
           </h2>
           <p className="text-muted mb-12">
             Let&apos;s connect and discuss opportunities — reach out through
@@ -97,13 +97,15 @@ const ContactSection = () => {
                 {...(channel.external
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
-                className="group bg-surface border border-edge rounded-lg p-5 flex items-center gap-4 transition-all duration-300 hover:border-accent-dim hover:shadow-[0_0_24px_rgba(74,222,128,0.08)]"
+                className="group bg-surface border border-edge rounded-xl p-5 flex items-center gap-4 transition-all duration-300 hover:border-violet-500/40 hover:shadow-[0_0_24px_rgba(139,92,246,0.15)]"
               >
-                <div className="text-accent group-hover:text-accent-strong transition-colors duration-300">
+                <div className="text-accent-blue group-hover:text-accent transition-colors duration-300">
                   {channel.icon}
                 </div>
-                <div className="font-mono min-w-0">
-                  <p className="text-sm text-foreground">{channel.name}</p>
+                <div className="min-w-0">
+                  <p className="text-sm font-medium text-foreground capitalize">
+                    {channel.name}
+                  </p>
                   <p className="text-xs text-muted truncate">
                     {channel.detail}
                   </p>
@@ -112,8 +114,8 @@ const ContactSection = () => {
             ))}
           </div>
 
-          <p className="font-mono text-xs text-muted/70 text-center mt-16">
-            {"//"} © 2026 Eric Cui — built with Next.js
+          <p className="text-xs text-muted/70 text-center mt-16">
+            © 2026 Eric Cui — built with Next.js
           </p>
         </div>
       </div>

@@ -216,16 +216,16 @@ const ProjectsSection = () => {
     <section id="projects" className="py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-12">
-            <span className="text-accent-dim">$</span> ls{" "}
-            <span className="text-accent">~/projects</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
+            Projects
+            <span className="block w-16 h-1 mt-3 rounded-full bg-gradient-to-r from-violet-500 to-blue-500" />
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {displayedProjects.map((project, index) => (
               <div
                 key={index}
-                className={`bg-surface border border-edge rounded-lg overflow-hidden flex flex-col h-full transition-all duration-300 hover:border-accent-dim hover:shadow-[0_0_24px_rgba(74,222,128,0.08)] ${
+                className={`bg-surface border border-edge rounded-xl overflow-hidden flex flex-col h-full transition-all duration-300 hover:border-violet-500/40 hover:shadow-[0_0_24px_rgba(139,92,246,0.15)] ${
                   index >= 3 && showAll && !isAnimating ? "animate-fadeIn" : ""
                 } ${index >= 3 && isAnimating ? "animate-fadeOut" : ""}`}
               >
@@ -241,16 +241,16 @@ const ProjectsSection = () => {
                   <h3 className="text-base font-bold text-foreground leading-snug mb-2">
                     {project.title}
                   </h3>
-                  <div className="flex flex-wrap gap-2 mb-3 font-mono text-xs">
+                  <div className="flex flex-wrap gap-2 mb-3 text-xs">
                     {project.links.map((link, linkIndex) => (
                       <a
                         href={link.link}
                         key={linkIndex}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-accent hover:text-accent-strong hover:underline underline-offset-4 transition-colors duration-200"
+                        className="rounded-full border border-blue-500/40 text-accent-blue px-2.5 py-0.5 hover:bg-blue-500/10 hover:border-blue-400 transition-all duration-200"
                       >
-                        [{link.name}]
+                        {link.name} ↗
                       </a>
                     ))}
                   </div>
@@ -262,7 +262,7 @@ const ProjectsSection = () => {
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="font-mono text-[11px] text-accent border border-accent-dim/60 rounded px-1.5 py-0.5"
+                        className="text-[11px] text-violet-300 bg-violet-500/10 rounded-full px-2 py-0.5"
                       >
                         {tech}
                       </span>
@@ -277,17 +277,17 @@ const ProjectsSection = () => {
             {!showAll ? (
               <button
                 onClick={() => setShowAll(true)}
-                className="font-mono text-sm text-muted border border-edge rounded-lg px-6 py-2.5 hover:text-accent hover:border-accent-dim transition-all duration-300"
+                className="text-sm text-muted border border-edge rounded-full px-6 py-2.5 hover:text-foreground hover:border-violet-500/50 hover:shadow-[0_0_18px_rgba(139,92,246,0.2)] transition-all duration-300"
               >
-                $ ls --all <span className="text-accent-dim">↓</span>
+                Show more ↓
               </button>
             ) : (
               <button
                 onClick={handleShowLess}
                 disabled={isAnimating}
-                className="font-mono text-sm text-muted border border-edge rounded-lg px-6 py-2.5 hover:text-accent hover:border-accent-dim transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="text-sm text-muted border border-edge rounded-full px-6 py-2.5 hover:text-foreground hover:border-violet-500/50 hover:shadow-[0_0_18px_rgba(139,92,246,0.2)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                $ ls | head -3 <span className="text-accent-dim">↑</span>
+                Show less ↑
               </button>
             )}
           </div>

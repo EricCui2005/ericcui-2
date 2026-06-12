@@ -45,16 +45,16 @@ const ExperienceSection = () => {
     <section id="experience" className="py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-12">
-            <span className="text-accent-dim">$</span> git log{" "}
-            <span className="text-accent">--experience</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
+            Experience
+            <span className="block w-16 h-1 mt-3 rounded-full bg-gradient-to-r from-violet-500 to-blue-500" />
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {experiences.map((experience, index) => (
               <div
                 key={index}
-                className="bg-surface border border-edge rounded-lg p-6 flex flex-col h-full transition-all duration-300 hover:border-accent-dim hover:shadow-[0_0_24px_rgba(74,222,128,0.08)]"
+                className="bg-surface border border-edge rounded-xl p-6 flex flex-col h-full transition-all duration-300 hover:border-violet-500/40 hover:shadow-[0_0_24px_rgba(139,92,246,0.15)]"
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="relative w-14 h-14 shrink-0">
@@ -69,21 +69,15 @@ const ExperienceSection = () => {
                     <h3 className="text-lg font-bold text-foreground leading-snug mb-1">
                       {experience.position}
                     </h3>
-                    <h4 className="font-mono text-accent text-sm">
+                    <h4 className="text-accent text-sm font-medium">
                       {experience.company}
                     </h4>
                   </div>
                 </div>
 
-                <div className="font-mono text-xs text-muted mb-4 space-y-1">
-                  <p>
-                    <span className="text-accent-dim">--when</span>{" "}
-                    {experience.duration}
-                  </p>
-                  <p>
-                    <span className="text-accent-dim">--where</span>{" "}
-                    {experience.location}
-                  </p>
+                <div className="text-xs text-muted mb-4 space-y-1">
+                  <p>{experience.duration}</p>
+                  <p>{experience.location}</p>
                 </div>
 
                 <p className="text-muted text-sm leading-relaxed flex-grow">
