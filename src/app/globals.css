@@ -32,25 +32,3 @@ body {
 .debug {
   border: 1px solid red;
 }
-
-.construction-tape {
-  height: 12px;
-  background: repeating-linear-gradient(
-    45deg,
-    #facc15 0px,
-    #facc15 14px,
-    #111827 14px,
-    #111827 28px
-  );
-  background-size: 200% 100%;
-  animation: tape-scroll 1.5s linear infinite;
-}
-
-@keyframes tape-scroll {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 39.6px 0;
-  }
-}
